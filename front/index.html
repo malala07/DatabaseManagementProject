@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Details</title>
     <style>
+
+        header {
+            
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+        }
        body {
         --color-primary: #009579;
         --color-primary-dark: #007f67;
@@ -19,7 +29,7 @@
         align-items: center;
         justify-content: center;
         font-size: 18px;
-        background: url(./background.jpg);
+        background: url(https://wallpapers.com/images/featured/new-york-city-5oaa14h4mw6w3o71.jpg);
         background-size: cover;
         }
 
@@ -43,6 +53,9 @@
             display: none;
         }
         .form{
+            display: none;
+        }
+        .filter_form{
             display: none;
         }
 
@@ -192,11 +205,11 @@
                 <h1 class="form__title">Login</h1>
                 <div class="form__message form__message--error"></div>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Username or email">
+                    <input type="text" class="form__input" id = "username" autofocus placeholder="Username or email">
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
+                    <input type="password" class="form__input" id="password" autofocus placeholder="Password">
                     <div class="form__input-error-message"></div>
                 </div>
                 <button class="form__button" type="submit">Continue</button>
@@ -211,20 +224,17 @@
             <form class="travel form--hidden" id="createAccount">
                 <h1 class="form__title">Create Account</h1>
                 <div class="form__message form__message--error"></div>
+                
                 <div class="form__input-group">
-                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                    <input type="text" class="form__input" id ="signupEmail"autofocus placeholder="Email Address">
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Email Address">
+                    <input type="password" class="form__input" id ="signupPassword" autofocus placeholder="Password">
                     <div class="form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                    <input type="password" class="form__input" id = "confirmPassword" autofocus placeholder="Confirm password">
                     <div class="form__input-error-message"></div>
                 </div>
                 <button class="form__button" type="submit">Continue</button>
@@ -232,6 +242,37 @@
                     <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
                 </p>
             </form>
+
+            <form class="travel filter_form" id="filterData">
+                <h1 class="form__title">Filter</h1>
+                <div class="form__message form__message--error"></div>
+                
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id ="airline"autofocus placeholder="Airline Company">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id ="starLevel" autofocus placeholder="Hotel Star Level">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <label>Amenities:</label>
+
+                    <div>
+                        <input type="checkbox" class="form__input" id="amenityPool">
+                        <label for="amenityPool">Pool</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" class="form__input" id="amenityWifi">
+                        <label for="amenityWifi">WiFi</label>
+                    </div>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+    
+            </form>
+
 
             <div id="flightDetails"></div>
         </div>
