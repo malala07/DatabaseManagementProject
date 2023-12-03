@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to New York through Laguardia Airport</h1>
+    </header>
+
+    <main>
+        <form id="flightForm">
+            <!--<label for="flightNumber">Enter Flight Number:</label>
+            <input type="text" id="flightId" name="flightNumber" required>
+            <button id ="search" type="button" >Get Details</button>
+             -->
+            <label for="depaturePlace">Travel From:</label>
+            <input type="text" id="depatureName" name="depaturePlace" required>
+        
+
+            <label for="dateRange">Get to new york on:</label>
+            <input type="date" id="startDate" name="startDate" required>
+           
+                    
+
+            <button id ="search" type="button" >Get Details</button>
+               
+        </form>
+
+        <div id="flightDetails"></div>
+    </main>
+
+    <script src = "index.js" >
+        
+    </script>
+
+</body>
+</html>
